@@ -1,0 +1,7 @@
+# \<div\>: The content Division element  
+> **division** _noun_ PART (B2) the act of separating something into parts or groups, or the way that it is separated.  
+The ```<div>``` HTML element is the generic container for flow content. It has no effect on the content or layout until styled in some way using [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS).
+As a "pure" container, the ```<div>``` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the ```class``` or ```id``` attributes, marking a section of a document as being written in a different language, and so on.  
+# \<span>: The Content Span element  
+> **span** _noun_ LENGTH the length of something from one end to the other.  
+The ```<span>``` HTML element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the ```class``` or ```id``` attributes), or because they share attribute values, such as ```lang```. It should be used only when no other semantic element is appropriate. ```<span>``` is very much like a ```<div>``` element, but ```<div>``` is a [block-level element](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements) whereas a ```<span>``` is an [inline element](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements).

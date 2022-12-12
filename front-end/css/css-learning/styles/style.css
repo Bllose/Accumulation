@@ -1,0 +1,33 @@
+    background-color: #00539F;
+    width: 600px;
+    margin: 0 auto;
+    background-color: #FF9500;
+    padding: 0 60px 60px 60px;
+    border: 5px solid black;
+text-shadow 几个参数: 横向偏移量， 纵向偏移量， 模糊程度， 颜色
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 5px black;  
+p, li, h1 {
+    color: yellow;
+    display: block;
+    margin: 0 auto;
+/* 带有type参数定义的 p标签 */
+p[type] {
+    color: seagreen;
+    一个完整的规则叫则 ruleset, 通常直接称之为 rule
+    p 称之为 Selector - 选择器
+    花括号内的所有东西称之为: Declaration  -  申明
+    每一个参数 key 称之为 Property - 属性; value 称之为 Property value - 属性值  
+    当存在相同选择器下的相同申明， 但是属性值不同时， 
+    页面首先排查每个选择器是否有特殊的定义，比如p[type] 即带有 type 属性的 p 标签，匹配度越高，越优先被最终渲染
+    在所有定义相同的情况下， 页面渲染会选择最后一次出现的属性值作为最终渲染效果
+    color: red; /* 段落内字体颜色 */
+    width: 100px; /* 段落的宽度 */
+    border: 1px solid black;
+/* 带有id为my-id的任意标签 */
+    color: blue;
+/* 所有超级链接，被鼠标悬停时 */
+a:hover {
+    color: slateblue;

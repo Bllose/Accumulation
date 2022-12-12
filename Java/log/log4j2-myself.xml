@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="60" packages="com.Example.it.Example.Example.log">
+    <properties>
+        <property name="logPath">${sys:Example.log.path}</property>
+        <property name="business_logger_level">debug</property>
+    </properties>
+    <SpotlightFilter />
+    <Appenders>
+        <!-- %d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} %-5p %c:%L - %msg%n" />
+            <!-- <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" /> -->
+            <!-- <PatternLayout pattern="%-d [%t] %-5p %c{1}:%L - %m%n" /> -->
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- 项目逻辑自定义日志打印等级 -->
+        <AsyncLogger name="come.Example.it.Example.Example.Example.Example" level="debug" includeLocation="true" />
+        <!-- Jalor 启动完成日志打印 End AppInfoCollectionFrameworkHandler.  For Version: 6.6 -->
+        <AsyncLogger name="com.Example.it.Example5.appinfo.internal.impl" level="debug" includeLocation="true" />
+        <!-- Jalor 项目启动加载项日志， 需要检查初始化内容时修改为debug -->
+        <AsyncLogger name="com.Example.it.Example.boot.autoconfigure" level="info" includeLocation="true" />
+        <AsyncLogger name="com.Example.it.Example.boot.after" level="info" includeLocation="true" />
+        <!-- 框架，工具 额外日志， 按需要进行打印 -->
+        <AsyncLogger name="com.netflix" level="warn" includeLocation="true" />
+        <AsyncLogger name="org.apache" level="warn" includeLocation="true" />
+        <AsyncLogger name="io.swagger" level="warn" includeLocation="true" />
+        <AsyncLogger name="com.Example.it.usf" level="warn" includeLocation="true" />
+        <AsyncLogger name="com.Example.it.Example5" level="warn" includeLocation="true" />
+        <AsyncLogger name="com.Example.it.Example.Example.core" level="warn" includeLocation="true" />
+        <AsyncLogger name="org.springframework" level="warn" includeLocation="true" />
+        <AsyncLogger name="net.sf" level="warn" includeLocation="true" />
+        <AsyncLogger name="org.hibernate" level="warn" includeLocation="true" />
+        <!-- 控制 httpClient 的日志输出 apache.http.wire  -->
+        <AsyncLogger name = "httpclient" level="warn" includeLocation="true" />
+        <AsyncLogger name = "org.apache" level="warn" includeLocation="true" />
+        <!-- 上线时，应该将各个info改为info以上级别，并去除console的Appender -->
+        <AsyncRoot level="debug">
+            <AppenderRef ref="Console" />
+        </AsyncRoot>
+    </Loggers>
+</Configuration>
